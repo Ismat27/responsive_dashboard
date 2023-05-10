@@ -1,0 +1,8 @@
+* {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+}
