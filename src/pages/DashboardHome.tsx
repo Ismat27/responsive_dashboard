@@ -1,5 +1,10 @@
 import DashboardLayout from "../components/DashboardLayout";
 import Promotions from "../components/Promotions";
+import Summary from "../charts/Summary";
+import OrderVoume from "../charts/OrderVolume";
+import Announcements from "../components/Announcements";
+import { announcements_data } from "../data/announcements";
+
 const DashboardHome = () => {
   return (
     <DashboardLayout>
@@ -12,6 +17,11 @@ const DashboardHome = () => {
               <div className="bg-white rounded-lg h-[248px]"></div>
               <div className="bg-white rounded-lg h-[248px]"></div>
             </div>
+            <div className="my-6  grid gap-4 md:grid-cols-2 items-start">
+              <Summary />
+              <OrderVoume />
+            </div>
+            <Announcements data={announcements_data} />
           </div>
           <Promotions />
         </div>
