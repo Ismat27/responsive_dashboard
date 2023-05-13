@@ -79,7 +79,7 @@ const OrderVoume = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative h-[200px] max-[100%]:">
           <Bar data={data} options={{ ...options }} />
         </div>
       </div>

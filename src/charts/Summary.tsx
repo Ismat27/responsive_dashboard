@@ -24,6 +24,7 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
+      display: false,
       position: "bottom" as const,
       labels: {
         useBorderRadius: true,
@@ -86,13 +87,23 @@ const Summary = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative h-[200px]">
           <Line
             className=""
             data={data}
             options={{ ...options, maintainAspectRatio: false }}
           />
         </div>
+        <ul className="my-4 flex gap-12">
+          <li className="flex items-center gap-1">
+            <span className="h-2 w-2 rounded-full inline-block bg-[#7367F0]"></span>
+            <span className="text-sm text-black-100 capitalize">this week</span>
+          </li>
+          <li className="flex items-center gap-1">
+            <span className="h-2 w-2 rounded-full inline-block bg-[#FFE600]"></span>
+            <span className="text-sm text-black-100 capitalize">last week</span>
+          </li>
+        </ul>
       </div>
     </article>
   );
