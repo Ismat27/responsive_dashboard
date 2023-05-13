@@ -1,5 +1,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import SmallChartsWrapper from "./SmallChartsWrapper";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -24,9 +25,9 @@ const NewProductRejection = () => {
       <h2 className="text-sm font-bold text-black-200">
         New Product Creation: Rejected Products
       </h2>
-      <div className="self-center relative h-[150px] w-[150px] mx-[auto]">
+      <SmallChartsWrapper>
         <Doughnut data={data} />
-      </div>
+      </SmallChartsWrapper>
       <div>
         <ul className="my-4">
           <li className="flex items-center gap-2">

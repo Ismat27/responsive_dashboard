@@ -8,6 +8,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import SmallChartsWrapper from "./SmallChartsWrapper";
 
 ChartJS.register(
   CategoryScale,
@@ -69,9 +70,9 @@ const PendingOrders = () => {
       <h2 className="text-sm font-bold text-black-200 mb-1">
         Total Pendinding Order
       </h2>
-      <div className="self-center relative h-[150px] w-[150px] max-w-[100%] mx-[auto]">
+      <SmallChartsWrapper>
         <Bar data={data} options={{ ...options }} />
-      </div>
+      </SmallChartsWrapper>
       <div>
         <p className="text-sm text-black-100 font-bold">Current Daily Order</p>
       </div>
